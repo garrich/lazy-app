@@ -5,12 +5,19 @@
 @font-face { font-family: 'PT Sans Narrow'; font-style: normal; font-weight: 400; src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v3/UyYrYy3ltEffJV9QueSi4S4mX3cpNo8MnLri8k21-rs.woff) format('woff'); }
 
 body {
+    height: 1200px;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     background: black;
     height: 100hv;
     overflow: hidden;
     text-align: center;
+    /* animation */
+    background-image: linear-gradient(to top, rgb(73, 71, 71) 0%, rgb(0, 0, 0), rgb(73, 71, 71) 100%);
+    animation: gradient-vertical 20s infinite linear;
+    animation-delay: 0.1s;
+    background-size: auto 200%;
+    background-position: top center;
   }
   h1{
       color: #fbda4f;
@@ -63,7 +70,7 @@ body {
       height: 130px;
   }
   #clock{
-      background: #000;
+      background: transparent;
       border: none;
   }
   dl { 
@@ -74,7 +81,7 @@ body {
        width:810px; height:150px;
         /* background:red; */
         font-size:30px; 
-        color:#3C100C; }
+        color:#000; }
   dt { 
       position:absolute;
        top:10px; left:0;
@@ -110,3 +117,8 @@ body {
   dt#mins_lbl, dd#minutes { left:540px; }
   dt#secs_lbl, dd#seconds { left:675px; }
   #dl * { text-outline: 1px 1px #000; }
+  @keyframes gradient-vertical {
+    50% {
+        background-position: bottom center;
+    }
+}
