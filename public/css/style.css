@@ -1,0 +1,112 @@
+/*
+  Styles from this codepen:
+  https://codepen.io/official_naveen/pen/rgknI
+*/
+@font-face { font-family: 'PT Sans Narrow'; font-style: normal; font-weight: 400; src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v3/UyYrYy3ltEffJV9QueSi4S4mX3cpNo8MnLri8k21-rs.woff) format('woff'); }
+
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background: black;
+    height: 100hv;
+    overflow: hidden;
+    text-align: center;
+  }
+  h1{
+      color: #fbda4f;
+  }
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+  }
+ .point{
+     position: absolute;
+     top:100px;
+     left: 100px;
+     background: #fbda4f;
+     /* border-radius: 50%; */
+     width: 20px;
+     height: 20px;
+ }
+ .vertical-line{
+     position: absolute;
+     top:120px;
+     left: 109px;
+     background:#fbda4f;
+     height: 100%;
+     width: 2px;
+ }
+  p {
+    color: #E64A19;
+  }
+  .line{
+    width: 90%;
+    height: 2px;
+    background: #fbda4f;
+    position: relative
+  }
+  .right-point{
+    position: absolute;
+    top:-10px;
+    right: 0px;
+    background: #fbda4f;
+    /* border-radius: 50%; */
+    width: 20px;
+    height: 20px;
+  }
+  svg{
+    margin-top: 40px;
+      fill: white;
+      height: 130px;
+  }
+  #clock{
+      background: #000;
+      border: none;
+  }
+  dl { 
+      position:relative;
+      text-align: center;
+       height:100px; 
+       margin:20px auto 50px; 
+       width:810px; height:150px;
+        /* background:red; */
+        font-size:30px; 
+        color:#3C100C; }
+  dt { 
+      position:absolute;
+       top:10px; left:0;
+        width:135px; 
+        text-align:center; 
+        background: #ddd;
+        border-right: 5px solid black;
+        box-sizing: border-box;
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+  dd {  position:absolute; 
+    top:60px; 
+    left:0; 
+    right: 0;
+    height: 80px;
+    line-height: 80px;
+    font-size:60px; ;
+    border-right: 5px solid black;
+    text-align:center; 
+    width:135px; 
+    background: #fbda4f;
+    margin: 0;
+    box-sizing: border-box;
+}
+  dt#years_lbl, dd#years { left:0; }
+  dt#months_lbl, dd#months { left:135px; }
+  dt#days_lbl, dd#days { left:270px; }
+  dt#hrs_lbl, dd#hours { left:405px;  }
+  dt#mins_lbl, dd#minutes { left:540px; }
+  dt#secs_lbl, dd#seconds { left:675px; }
+  #dl * { text-outline: 1px 1px #000; }
